@@ -28,7 +28,7 @@
     <description>Phonegap, Cordova, Intel XDK plugin for Android to get Advertising Id Info using Google Play Services</description>
     <keywords>google,google play,advertising id,idfa,android,download,install</keywords>
 
-    <author email="praveen.dev@live.com" href="https://github.com/praves77/cordova-plugin-android-idfa">praves</author>
+    <author email="praves.dev@outlook.com" href="https://github.com/praves77/cordova-plugin-android-idfa">praves</author>
 
     <engines>
         <engine name="cordova" version=">=3.0.0" />
