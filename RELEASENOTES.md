@@ -1,6 +1,11 @@
 # Release Notes
 
-### 0.2.1 (Jul 29, 2015)
+### 1.0.3 (Jul 30, 2015)
+* Added working code
+* Updated Readme, plugin and package for typos
+* Added comments
+
+### 1.0.2 (Jul 29, 2015)
 * removed extraneous print statement
 * Updated files
 

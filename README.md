@@ -36,21 +36,21 @@ Make sure to review the Google Play Developer Program [policy](https://play.goog
 
 ### Advertising id info ###
 #### getAdInfo(success, error);
-Gets the advertising id (IDFA) info (id and limit ad flag).
+Gets the advertising id (IDFA) info (id and limit ad tracking flag).
 
-* {function()} success:    success callback with {idfa: <advertising id (IDFA)>, isLimitAd: <boolean> object argument.
+* {function()} success:    success callback with {idfa: <advertising id (IDFA)>, limitAd: <boolean>} as object argument.
 * {function()} failure:    failure callback.
 
 ### Advertising id ###
 #### getAdId(success, error);
 Gets the advertising id (IDFA).
 
-* {function()} success:    success callback with <advertising id (IDFA)> string argument.
+* {function()} success:    success callback with {idfa: <advertising id (IDFA)>} as object argument.
 * {function()} failure:    failure callback.
 
 ### Limit Ad Flag ###
 #### getLimitAdFlag(success, error);
-Gets the limit add flag.
+Gets the limit ad tracking flag.
 
-* {function()} success:    success callback with isLimitAd flag boolean argument.
+* {function()} success:    success callback with { limitAd: <boolean> } as object argument.
 * {function()} failure:    failure callback.
