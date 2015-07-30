@@ -1,5 +1,11 @@
 package com.praves.cordova.android.idfa;
 
+/**
+ * Class AndroidIDFA
+ * Description: Extends cordova plugin to get advertiser id (IDFA) for Android using Google Play API
+ * Author: praves
+ */
+
 //Cordova imports
 import org.apache.cordova.CordovaInterface; 
 import org.apache.cordova.CallbackContext; 
@@ -33,6 +39,7 @@ import java.util.Iterator;
 
 //pgcore import
 import com.praves.cordova.android.idfa.CoreException;
+
 
 public class AndroidIDFA extends CordovaPlugin {
 
@@ -91,6 +98,15 @@ public class AndroidIDFA extends CordovaPlugin {
         super.onResume(multitasking);
     }
 
+    /**
+     * Driver function to get advertiser info. Returns advertiser id info (defaults), or advertiser id
+     * or limit ad flag based on 'flag' parameter's values (0, 1, 2).
+     * @param callbackContext
+     * @param flag
+     *  0: adInfo is returned (defaults).
+     *  1: ad id is returned
+     *  2: limit ad flag is returned
+     */
     private void _getAdInfo(final CallbackContext callbackContext, final int flag) {
         new Thread(new Runnable() {
             public void run() {
@@ -127,16 +143,28 @@ public class AndroidIDFA extends CordovaPlugin {
         }).start();
     }
 
+    /**
+     * Function to get advertiser id info.
+     * @param callbackContext
+     */
     public void getAdInfo(final CallbackContext callbackContext) {
         final int flag = 0;
         _getAdInfo(callbackContext, flag);
     }
 
+    /**
+     * Function to get advertiser id.
+     * @param callbackContext
+     */
     public void getAdId(final CallbackContext callbackContext) {
         final int flag = 1;
         _getAdInfo(callbackContext, flag);
     }
 
+    /**
+     * Function to get limit advertisement flag.
+     * @param callbackContext
+     */
     public void getLimitAd(final CallbackContext callbackContext) {
         final int flag = 2;
         _getAdInfo(callbackContext, flag);

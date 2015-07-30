@@ -1,8 +1,12 @@
 package com.praves.cordova.android.idfa;
 
 /**
- * Created by pkumar on 7/28/15.
+ * Class AdvertisingIdClient
+ * Description: Determines advertiser id info using Google Play API. If google play is not installed
+ * on device then it handle it gracefully by unbinding service connection for context.
+ * Author: praves
  */
+
 
 import java.io.IOException;
         import java.util.concurrent.LinkedBlockingQueue;
@@ -37,29 +41,12 @@ public final class AdvertisingIdClient {
         }
     }
 
-//    public static AdInfo getAdvertisingIdInfo(Context context) throws Exception {
-//        if(Looper.myLooper() == Looper.getMainLooper()) throw new IllegalStateException("Cannot be called from the main thread");
-//
-//        try { PackageManager pm = context.getPackageManager(); pm.getPackageInfo("com.android.vending", 0); }
-//        catch (Exception e) { throw e; }
-//
-//        AdvertisingConnection connection = new AdvertisingConnection();
-//        Intent intent = new Intent("com.google.android.gms.ads.identifier.service.START");
-//        intent.setPackage("com.google.android.gms");
-//        if(context.bindService(intent, connection, Context.BIND_AUTO_CREATE)) {
-//            try {
-//                AdvertisingInterface adInterface = new AdvertisingInterface(connection.getBinder());
-//                AdInfo adInfo = new AdInfo(adInterface.getId(), adInterface.isLimitAdTrackingEnabled(true));
-//                return adInfo;
-//            } catch (Exception exception) {
-//                throw exception;
-//            } finally {
-//                context.unbindService(connection);
-//            }
-//        }
-//        throw new IOException("Google Play connection failed");
-//    }
-
+    /**
+     * Returns advertiser id info.
+     * @param context
+     * @return
+     * @throws Exception
+     */
     public static AdInfo getAdvertisingIdInfo(Context context) throws Exception {
         if(Looper.myLooper() == Looper.getMainLooper())
             throw new IllegalStateException("Cannot be called from the main thread");
@@ -117,6 +104,11 @@ public final class AdvertisingIdClient {
             return binder;
         }
 
+        /**
+         * Returns advertiser id.
+         * @return
+         * @throws RemoteException
+         */
         public String getId() throws RemoteException {
             Parcel data = Parcel.obtain();
             Parcel reply = Parcel.obtain();
@@ -133,6 +125,12 @@ public final class AdvertisingIdClient {
             return id;
         }
 
+        /**
+         * Function to get limit ad tracking flag.
+         * @param paramBoolean
+         * @return
+         * @throws RemoteException
+         */
         public boolean isLimitAdTrackingEnabled(boolean paramBoolean) throws RemoteException {
             Parcel data = Parcel.obtain();
             Parcel reply = Parcel.obtain();
