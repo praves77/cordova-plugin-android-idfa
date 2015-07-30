@@ -11,16 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/praves77/cordova-plugin-android-idfa.git"
-  },
-  "bugs": {
-    "url": "https://github.com/praves77/cordova-plugin-android-idfa/issues"
-  },
-  "engines": {
-    "cordova": ">= 3.0.0"
-  },
-  "scripts": {
-    "test": "grunt test"
+    "url": "git+https://github.com/praves77/cordova-plugin-android-idfa.git"
   },
   "dependencies": {
     "com.google.play.services": "*"
@@ -28,6 +19,9 @@
   "keywords": [
     "cordova",
     "idfa",
+    "google",
+    "google play",
+    "advertising id",
     "idfa for android",
     "cordova plugin",
     "advertiserId",
@@ -35,11 +29,20 @@
     "advertising id for android",
     "advertising id for android using google play",
     "advertising id for android using google play services",
+    "android",
+    "download",
+    "install",
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "author": { 
-    "name" : "praves", 
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": {
+    "name" : "praves",
     "email": "praves.dev@outlook.com"
   },
   "licenses": [
@@ -47,5 +50,9 @@
       "type": "MIT",
       "url": "https://github.com/praves77/cordova-plugin-android-idfa/LICENSE.md"
     }
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/praves77/cordova-plugin-android-idfa/issues"
+  },
+  "homepage": "https://github.com/praves77/cordova-plugin-android-idfa#readme"
 }
