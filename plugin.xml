@@ -22,7 +22,7 @@
 -->
 
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-android-idfa" version="1.0.3">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-android-idfa" version="1.0.4">
 
     <name>Advertising ID (IDFA) Plugin using Google Play Services for Android</name>
     <description>Phonegap, Cordova, Intel XDK plugin for Android to get Advertising Id Info using Google Play Services</description>
