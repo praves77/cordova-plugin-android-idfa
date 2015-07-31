@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-android-idfa",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Cordova Advertising ID (IDFA) Plugin for Android using Google Play Services API",
   "cordova": {
     "id": "cordova-plugin-android-idfa",
