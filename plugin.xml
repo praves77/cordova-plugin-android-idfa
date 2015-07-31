@@ -50,6 +50,8 @@
 <platform name="android">
 
     <source-file src="src/android/AndroidIDFA.java" target-dir="src/com/praves/cordova/idfa" />
+    <source-file src="src/android/CoreException.java" target-dir="src/com/praves/cordova/idfa" />
+    <source-file src="src/android/AdvertisingIdClient.java" target-dir="src/com/praves/cordova/idfa" />
 
     <config-file target="res/xml/config.xml" parent="/*">
         <feature name="AndroidIDFA">
