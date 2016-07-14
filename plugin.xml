@@ -39,8 +39,6 @@
     <repo>https://github.com/praves77/cordova-plugin-android-idfa.git</repo>
     <issue>https://github.com/praves77/cordova-plugin-android-idfa/issues</issue>
 
-    <dependency id="com.google.play.services" />
-
     <js-module src="www/androidIDFA.js" name="androidIDFA">
         <!--<clobbers target="androidIDFA" />-->
         <merges target="androidIDFA" />
@@ -58,6 +56,8 @@
             <param name="android-package" value="com.praves.cordova.android.idfa.AndroidIDFA" />
         </feature>
     </config-file>
+    
+    <framework src="com.google.android.gms:play-services-ads:+" />
 
 </platform> 
 
