@@ -63,6 +63,18 @@
 
 <!-- ios-specific elements -->
 <platform name="ios">
+
+    <config-file target="config.xml" parent="/*">
+    <feature name="AndroidIDFA">
+      <param name="ios-package" value="AndroidIDFA"/>
+    </feature>
+    </config-file>
+
+    <framework src="AdSupport.framework" weak="true" />
+
+  <header-file src="src/ios/AndroidIDFA.h" />
+  <source-file src="src/ios/AndroidIDFA.m" />
+
 </platform>
 
 </plugin>

@@ -1,5 +1,5 @@
 # cordova-plugin-android-idfa
-Phonegap, Cordova, Intel XDK plugin for Android to get Advertising Id Info
+Phonegap, Cordova, Intel XDK plugin to get Advertising Id Info
 
 Advertising ID (IDFA) Plugin for Android using Google Play Services
 
@@ -7,7 +7,6 @@ This plugin depends on [com.google.play.services](http://plugins.cordova.io/#/pa
 Cordova (PhoneGap) 3.0+ Plugin to get Adertising ID (IDFA) on Adnroid device using Google Play Sercies API.
 Obtains [advertising id (IDFA) info](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en).
 
-**iOS CAUTION:** This plugin is for Android Platform only.
 
 Prerequisites:
 * A Cordova 3.0+ project for Android
