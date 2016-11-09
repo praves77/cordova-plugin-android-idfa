@@ -7,7 +7,7 @@
 
 - (void)getIDFV:(CDVInvokedUrlCommand*)command;
 
-- (void)getLimitAdFlag:(CDVInvokedUrlCommand*)command;
+- (void)getLimitAd:(CDVInvokedUrlCommand*)command;
 
 - (void)getAdInfo:(CDVInvokedUrlCommand*)command;
 

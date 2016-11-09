@@ -18,7 +18,8 @@
             
             // have to handle iOS bug where 00000000-0000-0000-0000-000000000000 may be returned on iOS 6.0
             if (advertiserID != nil && [advertiserID length] > 0 && ![advertiserID isEqualToString:@"00000000-0000-0000-0000-000000000000"]) {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:advertiserID];
+                NSDictionary *data = @{@"idfa" : advertiserID};        
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:data];
             }
             
             else {
@@ -61,7 +62,7 @@
 
 // Returns advertisingTrackingEnabled as boolean
 // Will return error on iOS < 6.0 since AdSupport framwork doesn't exist
-- (void)getLimitAdFlag:(CDVInvokedUrlCommand*)command
+- (void)getLimitAd:(CDVInvokedUrlCommand*)command
 {
     [self.commandDelegate runInBackground:^{
         CDVPluginResult* pluginResult = nil;
@@ -69,8 +70,6 @@
         if (NSClassFromString(@"ASIdentifierManager")) {
 
             BOOL enabled = [[NSClassFromString(@"ASIdentifierManager") sharedManager] isAdvertisingTrackingEnabled];
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:!enabled];
-
             NSDictionary *data = @{@"limitAd" : [NSNumber numberWithBool:!enabled]};
         
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:data];
