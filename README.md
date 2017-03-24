@@ -16,6 +16,7 @@ Prerequisites:
 ## Platform SDK supported ##
 
 * Android, using Google Play Services for Android
+* iOS
 
 ---
 ## Quick start ##
