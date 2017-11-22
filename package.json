@@ -13,9 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/praves77/cordova-plugin-android-idfa.git"
   },
-  "dependencies": {
-    "com.google.play.services": "*"
-  },
   "keywords": [
     "cordova",
     "idfa",
