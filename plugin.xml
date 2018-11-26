@@ -57,7 +57,7 @@
         </feature>
     </config-file>
     
-    <framework src="com.google.android.gms:play-services-ads:+" />
+    <framework src="com.google.android.gms:play-services-ads-identifier:+" />
 
 </platform> 
 
